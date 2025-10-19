@@ -179,6 +179,15 @@
   z-index: 1;
 }
 
+@media (max-width: 900px) {
+  #fix {
+    background-image: url("../assets/img/luthier.jpg"); /* Usa una versión más vertical */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Evita el "parallax" en móviles */
+  }
+}
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -280,6 +289,15 @@
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
+}
+
+@media (max-width: 900px) {
+  #clientes {
+    background-image: url("../assets/img/banner2.jpeg"); /* Usa una versión más vertical */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Evita el "parallax" en móviles */
+  }
 }
 
 .banner2 {
