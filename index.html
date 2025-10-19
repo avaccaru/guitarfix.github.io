@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuitarFix</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logopro.png">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span>GuitarFix</span>
+            <img class="icono" src="assets/img/logopro.png" alt="icon">
+        </div>
+
+        <!-- Botón del menú hamburguesa -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#fix">Fix</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#contactanos">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section class="banner" id="fix">
+            <h1 class="devuelve">Devuelve el alma a tu guitarra con GuitarFix</h1>
+            <p class="especialista">Especialistas en restauración y mantenimiento de guitarras acústicas, eléctricas y bajos.</p>
+            <a 
+                href="https://api.whatsapp.com/send?phone=50664794381&text=¡Hola!%20Quiero%20agendar%20una%20restauración%20para%20mi%20guitarra%20con%20GuitarFix." 
+                target="_blank" 
+                class="cta-btn">
+                Agenda tu restauración ahora
+            </a>
+        </section>
+        <section class="servicios" id="servicios">
+            <h2>Nuestros servicios</h2>
+            <p class="servicios-intro">En GuitarFix cuidamos cada detalle de tu instrumento, desde la electrónica hasta tu estética. Conoce lo que podemos hacer por ti.</p>
+
+            <div class="servicios-contenedor">
+
+                <div class="servicios-card">
+                    <img src="assets/img/cambio-cuerdas.jpg" alt="Cambio de cuerdas de guitarra">
+                    <h3>Cambio de cuerdas</h3>
+                    <p>Instalamos cuerdas nuevas, ajustamos la tensión y calibramos tu guitarra para lograr un sonido limpio y balanceado.</p>
+                </div>
+                <div class="servicios-card">
+                    <img src="assets/img/revision-electronica.avif" alt="Revisión electrónica de guitarra">
+                    <h3>Revisión electrónica</h3>
+                    <p>Verificamos pastillas, potenciómetro, cables. y conexiones para eliminar ruidos y restaurar la claridad del sonido.</p>
+                </div>
+                <div class="servicios-card">
+                    <img src="assets/img/ajuste-mastil.jpg" alt="Ajuste de mástil de guitarra">
+                    <h3>Ajuste del mástil</h3>
+                    <p>Corregimos la curvatura del mástil y regulamos la acción para una ejecución cómoda y precisa.</p>
+                </div>
+                <div class="servicios-card">
+                    <img src="assets/img/restauracion-acabado.jpg" alt="Restauración del acabado de guitarra">
+                    <h3>Restauración del acabado</h3>
+                    <p>Devolvemos el brillo y la estética original a tu instrumento con técnicas de pulido y retoque profesional.</p>
+                </div>
+            </div>
+        </section>
+    <section class="banner2" id="clientes">
+            <h2 class="testimonios-titulo">Lo que dicen nuestros clientes</h2>
+
+            <!-- Testimonios: carrusel JS-driven -->
+            <div class="carousel">
+                <div class="slides">
+                    <div class="slide" aria-hidden="false">
+                        <div class="card">
+                            <div class="stars">★★★★★</div>
+                            <p>"GuitarFix devolvió la vida a mi Les Paul. El acabado quedó impecable y la entonación perfecta."</p>
+                            <span class="author">- Alejandro M.</span>
+                            <button class="nav prev" aria-label="Previous">‹</button>
+                            <button class="nav next" aria-label="Next">›</button>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="card">
+                            <div class="stars">★★★★★</div>
+                            <p>"El ajuste de mástil dejó mi guitarra más cómoda que nunca. Atención súper profesional."</p>
+                            <span class="author">- Bárbara S.</span>
+                            <button class="nav prev" aria-label="Previous">‹</button>
+                            <button class="nav next" aria-label="Next">›</button>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Me repararon la electrónica y ahora no tengo zumbidos ni pérdidas de señal. Muy recomendados."</p>
+                            <span class="author">- Carlos R.</span>
+                            <button class="nav prev" aria-label="Previous">‹</button>
+                            <button class="nav next" aria-label="Next">›</button>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Restauraron el acabado de mi bajo con mucha paciencia y detalle. Volvió a lucir como nuevo."</p>
+                            <span class="author">- Daniela P.</span>
+                            <button class="nav prev" aria-label="Previous">‹</button>
+                            <button class="nav next" aria-label="Next">›</button>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Servicio rápido y con explicación de cada paso. Mi guitarra suena más clara y equilibrada."</p>
+                            <span class="author">- Eduardo T.</span>
+                            <button class="nav prev" aria-label="Previous">‹</button>
+                            <button class="nav next" aria-label="Next">›</button>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Los precios fueron justos y la calidad del trabajo sobresaliente. Volveré sin dudas."</p>
+                            <span class="author">- Fernanda L.</span>
+                            <button class="nav prev" aria-label="Previous">‹</button>
+                            <button class="nav next" aria-label="Next">›</button>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Arreglaron las clavijas y la entonación quedó perfecta. Gran trabajo técnico."</p>
+                            <span class="author">- Gonzalo V.</span>
+                            <button class="nav prev" aria-label="Previous">‹</button>
+                            <button class="nav next" aria-label="Next">›</button>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Atención amable y resultaron muy profesionales con una guitarra antigua que creía perdida."</p>
+                            <span class="author">- Isabel C.</span>
+                            <button class="nav prev" aria-label="Previous">‹</button>
+                            <button class="nav next" aria-label="Next">›</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- indicators -->
+                <div class="indicators" role="tablist" aria-label="Testimonios">
+                    <button class="indicator" data-index="0" aria-label="Slide 1"></button>
+                    <button class="indicator" data-index="1" aria-label="Slide 2"></button>
+                    <button class="indicator" data-index="2" aria-label="Slide 3"></button>
+                    <button class="indicator" data-index="3" aria-label="Slide 4"></button>
+                    <button class="indicator" data-index="4" aria-label="Slide 5"></button>
+                    <button class="indicator" data-index="5" aria-label="Slide 6"></button>
+                    <button class="indicator" data-index="6" aria-label="Slide 7"></button>
+                    <button class="indicator" data-index="7" aria-label="Slide 8"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" id="contactanos">
+            <div class="footer-content">
+            <p>Conecta con nosotros:</p>
+            <ul class="social-links">
+                <li>
+                    <a class="social-link" href="tel:+50664794381" aria-label="Llamar a GuitarFix">
+                        <!-- phone SVG -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12 1.05.38 2.07.77 3.02a2 2 0 0 1-.45 2.11L9.91 11.09a16 16 0 0 0 6 6l1.24-1.4a2 2 0 0 1 2.11-.45c.95.39 1.97.65 3.02.77A2 2 0 0 1 22 16.92z" stroke="#d0d378" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span class="social-text"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" href="https://instagram.com/GuitarFix" target="_blank" rel="noopener" aria-label="Instagram GuitarFix">
+                        <!-- instagram SVG -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="#d0d378" stroke-width="1.2"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8" stroke="#d0d378" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="17.5" cy="6.5" r="0.5" fill="#d0d378"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" href="https://api.whatsapp.com/send?phone=50664794381&text=Hola%20GuitarFix" target="_blank" rel="noopener" aria-label="WhatsApp GuitarFix">
+                        <!-- whatsapp SVG (bubble + handset) -->
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M20.52 3.48A11.9 11.9 0 0 0 12 1C6.48 1 2 5.48 2 11c0 1.98.57 3.82 1.56 5.36L3 21l4.82-1.27A9.94 9.94 0 0 0 12 20c5.52 0 9.99-4.48 9.99-9.99 0-2.68-1.06-5.17-3.47-6.53z" stroke="#d0d378" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <path d="M17.2 14.2c-.3 0-1 .2-1.7.3-.4.1-.8.1-1.2-.1-.6-.3-1.5-.9-2.3-1.8-.9-.9-1.5-1.9-1.8-2.5-.2-.4-.1-.8 0-1.2.2-.5.6-1.1 1-1.4.3-.2.6-.2.9-.1.3.1.6.3.9.6.3.3.5.6.8.9.2.3.4.5.6.6.3.1.7.1 1 .1.3 0 .6-.1.9-.2.3-.1.7-.2 1-.2.3 0 .6.1.8.3.2.1.5.3.7.5.2.2.4.5.5.8.1.3.1.6 0 .9-.1.4-.3.7-.6 1-.3.3-.6.6-.9.9-.3.3-.7.5-1 .5z" fill="#d0d378"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+             <p class="credits">GuitarFix © 2025</p>
+            </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.querySelectorAll(".nav-list a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    if (menuToggle.checked) {
+                        menuToggle.checked = false; // 🔹 Cierra el menú automáticamente
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Initialize all carousels on the page
+        (function initCarousels() {
+            const carousels = document.querySelectorAll('.carousel');
+            if (!carousels.length) return;
+
+            carousels.forEach((carousel) => {
+                const slides = Array.from(carousel.querySelectorAll('.slide'));
+                const indicators = Array.from(carousel.querySelectorAll('.indicator'));
+                const globalPrev = carousel.querySelector('.carousel-controls .prev');
+                const globalNext = carousel.querySelector('.carousel-controls .next');
+
+                let current = 0;
+
+                function show(index) {
+                    if (index < 0) index = slides.length - 1;
+                    if (index >= slides.length) index = 0;
+                    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+                    indicators.forEach((ind, i) => ind.classList.toggle('active', i === index));
+                    current = index;
+                }
+
+                // internal slide nav
+                slides.forEach((slide, idx) => {
+                    const prev = slide.querySelector('.nav.prev');
+                    const next = slide.querySelector('.nav.next');
+                    if (prev) prev.addEventListener('click', () => show(idx - 1));
+                    if (next) next.addEventListener('click', () => show(idx + 1));
+                });
+
+                // global controls
+                if (globalPrev) globalPrev.addEventListener('click', () => show(current - 1));
+                if (globalNext) globalNext.addEventListener('click', () => show(current + 1));
+
+                // indicators
+                indicators.forEach((btn) => {
+                    const idx = parseInt(btn.dataset.index, 10);
+                    btn.addEventListener('click', () => show(idx));
+                });
+
+                // touch support
+                let startX = 0;
+                carousel.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, {passive: true});
+                carousel.addEventListener('touchend', (e) => {
+                    const endX = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientX : startX;
+                    const diff = endX - startX;
+                    if (Math.abs(diff) > 40) {
+                        if (diff > 0) show(current - 1); else show(current + 1);
+                    }
+                });
+
+                // init
+                show(0);
+            });
+        })();
+    </script>
+
+</body>
+</html>

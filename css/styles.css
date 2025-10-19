@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+
+}
+
+.logo {
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFF8E1;
+}
+
+.icono {
+  width: 55px;
+  height: auto;
+  position: absolute;
+  top: 14px;
+  left: 210px;
+}
+/* ===========================
+   🔹 MENÚ HAMBURGUESA ANIMADO
+   =========================== */
+
+#menu-toggle {
+  display: none;
+}
+
+/* --- Estilo base del icono --- */
+.menu-icon {
+  width: 30px;
+  height: 25px;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  margin-right: 25px;
+  z-index: 101;
+}
+
+/* Líneas del icono */
+.menu-icon span,
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #FFF8E1;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.menu-icon span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-icon::before {
+  top: 0;
+}
+
+.menu-icon::after {
+  bottom: 0;
+}
+
+/* --- Efecto al abrir el menú (transformación a "X") --- */
+#menu-toggle:checked + .menu-icon::before {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+#menu-toggle:checked + .menu-icon::after {
+  transform: rotate(-45deg);
+  bottom: 10px;
+}
+
+#menu-toggle:checked + .menu-icon span {
+  opacity: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  /* Menú visible al hacer click */
+  #menu-toggle:checked + .menu-icon + .main-nav {
+    right: 0;
+  }
+
+  /* Estilo vertical de los enlaces */
+  .main-nav ul {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .main-nav a {
+    font-size: 1.6rem;
+    color: #FFF8E1;
+    text-decoration: none;
+  }
+}
+
+
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 40px;
+}
+
+.main-nav li a {
+    padding: 25px;
+    font-size: 1.3rem;
+    color: #FFF8E1;
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 7px;
+    border-bottom: 2px solid transparent;
+}
+.main-nav a:hover {
+    border-color: #FFF8E1;
+}
+
+#fix {
+  background-image: url(../assets/img/luthier.jpg);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF8E1;
+    text-align: center;
+}
+
+.devuelve {
+    margin: 0 100px;
+    font-size: 60px;
+    display: flex;
+    text-align: center;
+}
+
+.especialista {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.cta-btn {
+    margin-bottom: 30px;
+    display: inline-block;
+    background-color: black;
+    color: #FFF8E1;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 1000;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: rgb(68, 67, 67);
+    transform: scale(1.05);
+}
+
+.servicios {
+    padding: 80px 20px;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.servicios-intro {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 50px;
+}
+
+.servicios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicios-card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicios-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(220, 220, 220, 0.684);
+}
+
+.servicios-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.servicios-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.servicios-card h3 {
+    margin-bottom: 10px;
+}
+
+#clientes {
+  background-image: url(../assets/img/banner2.jpeg);
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.banner2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF8E1;
+    text-align: center;
+}
+
+/* Carousel (CSS-only) */
+.carousel {
+  position: relative;
+  width: min(1000px, 94%);
+  margin: 2rem auto 3rem auto;
+}
+
+
+.carousel .carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* let buttons inside be the interactive elements */
+}
+
+.carousel .carousel-controls .nav {
+  pointer-events: auto;
+}
+
+.slides {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.slide .card {
+  background: rgba(18,18,18,0.85);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  max-width: 900px;
+  width: 100%;
+  color: #e6dfbf;
+  position: relative;
+}
+
+.slide .stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.slide p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 50px;
+  color: #d0c9a8;
+}
+
+.slide .author {
+  display: block;
+  font-weight: 700;
+  color: #cfc29a;
+}
+
+/* slides visible when JS toggles .active */
+.slide.active {
+  left: 0;
+  opacity: 1;
+  position: relative;
+}
+
+/* Navigation arrows */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #FFF8E1;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav.prev { left: -20px; }
+.nav.next { right: -20px; }
+
+/* Indicators */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background: #d0c29a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .slides { height: auto; }
+  .nav.prev { left: 6px; }
+  .nav.next { right: 6px; }
+  .slide .card { padding: 1rem; }
+}
+
+/* Space the banner below the fixed header on small/medium devices */
+@media (max-width: 768px) {
+  /* Add top padding to banner so content isn't hidden under the fixed header */
+  .banner {
+    padding-top: 90px; /* header (approx) + extra gap */
+  }
+
+  .devuelve {
+    margin: 0 24px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.05;
+  }
+
+  .especialista {
+    margin-top: 18px;
+    margin-bottom: 24px;
+    font-size: 18px;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner {
+    padding-top: 110px; /* slightly more for very small devices */
+  }
+  .devuelve {
+    font-size: 28px;
+    margin: 0 16px;
+  }
+  .cta-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+.site-footer {
+  background-color: black;
+  color: #f3f4f6;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  margin: 0.5rem 0;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #eaeae5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
+
+.social-link svg,
+.social-img {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.social-img { object-fit: contain; }
+
+.social-text { color: #f8f8f4; font-size: 0.95rem; }
+
+@media (max-width: 480px) {
+  .social-text { display: none; } /* keep footer compact on very small screens */
+}
+
+.credits {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.whatsapp-logo {
+    width: 5px;
+    height: 5px;
+    color: #eeeee9;
+}
+
+.numero {
+    text-decoration: none;
+    color: #d0d378;
+}
